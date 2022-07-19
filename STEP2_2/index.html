@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vueサンプル</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <span v-if="isDisplay()">Hello Vue</span>
+
+      <button v-on:click="pushRandom">乱数追加</button>
+
+      <h1>偶数</h1>
+      <ul>
+        <li v-for="item in list" v-if="item %2 == 0">{{ item }}</li>
+      </ul>
+
+      <h1>奇数</h1>
+      <ul>
+        <li v-for="item in list" v-if="item %2 != 0">{{ item }}</li>
+      </ul>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
